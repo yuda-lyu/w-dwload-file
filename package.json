@@ -1,0 +1,30 @@
+{
+  "name": "w-dwload-file",
+  "version": "1.0.0",
+  "main": "dist/w-dwload-file.umd.js",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "lodash-es": "^4.17.21",
+    "wsemi": "^1.8.21"
+  },
+  "devDependencies": {
+    "w-package-tools": "^1.1.2"
+  },
+  "scripts": {
+    "test": "mocha --parallel --timeout 60000",
+    "deploy": "gh-pages -d docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuda-lyu/w-dwload-file.git"
+  },
+  "keywords": [
+    "package",
+    "tool",
+    "file",
+    "windows",
+    "nodejs"
+  ],
+  "author": "yuda-lyu(semisphere)",
+  "license": "MIT"
+}
