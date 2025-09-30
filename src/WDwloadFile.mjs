@@ -3,7 +3,6 @@ import { pipeline } from 'stream/promises'
 import { Transform } from 'stream'
 import get from 'lodash-es/get.js'
 import throttle from 'lodash-es/throttle.js'
-import isbol from 'wsemi/src/isbol.mjs'
 import isestr from 'wsemi/src/isestr.mjs'
 import isfun from 'wsemi/src/isfun.mjs'
 import cdbl from 'wsemi/src/cdbl.mjs'
@@ -19,7 +18,6 @@ import axios from 'axios'
  * @param {String} url 輸入檔案網址字串
  * @param {String} fp 輸入儲存mp4檔案路徑字串
  * @param {Object} [opt={}] 輸入設定物件，預設{}
- * @param {Boolean} [opt.clean=false] 輸入預先清除暫存檔布林值，預設false
  * @param {Function} [opt.funProg=null] 輸入回傳進度函數，傳入參數為prog代表進度百分比、nn代表當前已下載ts檔案數量、na代表全部須下載ts檔案數量，預設null
  * @returns {Promise} 回傳Promise，resolve回傳成功訊息，reject回傳錯誤訊息
  * @example
@@ -42,7 +40,6 @@ import axios from 'axios'
  *
  *     //WDwloadFile
  *     await WDwloadFile(url, fp, {
- *         clean: true, //單一程序執行時, 事先清除之前暫存檔, 減少浪費硬碟空間
  *         funProg,
  *     })
  *
@@ -63,12 +60,6 @@ import axios from 'axios'
  *
  */
 async function WDwloadFile(url, fp, opt = {}) {
-
-    //clean
-    let clean = get(opt, 'clean')
-    if (!isbol(clean)) {
-        clean = false
-    }
 
     //funProg
     let funProg = get(opt, 'funProg')

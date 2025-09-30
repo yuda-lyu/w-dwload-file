@@ -38,7 +38,6 @@ async function test() {
 
     //WDwloadFile
     await WDwloadFile(url, fp, {
-        clean: true, //單一程序執行時, 事先清除之前暫存檔, 減少浪費硬碟空間
         funProg,
     })
 
