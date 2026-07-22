@@ -27,7 +27,7 @@ import WDwloadFile from './src/WDwloadFile.mjs'
 async function test() {
 
     //url
-    let url = `https://cdn.jsdelivr.net/npm/w-demores@1.0.28/res/video/aigen.mp4`
+    let url = `https://cdn.jsdelivr.net/npm/w-demores/res/video/aigen.mp4`
 
     //fp
     let fp = './abc.mp4'
