@@ -1,13 +1,13 @@
 {
   "name": "w-dwload-file",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "main": "dist/w-dwload-file.umd.js",
   "dependencies": {
     "axios": "^1.12.2",
-    "wsemi": "^1.9.12"
+    "wsemi": "^1.9.21"
   },
   "devDependencies": {
-    "w-package-tools": "^1.1.16"
+    "w-package-tools": "^1.1.21"
   },
   "scripts": {
     "test": "mocha --parallel \"test/*.test.mjs\" --timeout 180000",
