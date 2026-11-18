@@ -1,10 +1,10 @@
 {
   "name": "w-dwload-file",
-  "version": "1.0.46",
+  "version": "1.0.47",
   "main": "dist/w-dwload-file.umd.js",
   "dependencies": {
     "axios": "^1.21.0",
-    "wsemi": "^1.9.66"
+    "wsemi": "^1.9.67"
   },
   "devDependencies": {
     "w-package-tools": "^1.1.28"
